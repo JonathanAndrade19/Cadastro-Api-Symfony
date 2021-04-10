@@ -8,9 +8,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController
 {
-    /**
-     * @Route("/", methods={"GET"})
-     */
     public function index(Request $request): Response
     {
         $resp = new Response();
@@ -23,17 +20,5 @@ class DefaultController
         $resp->setStatusCode(200);
 
         return $resp;
-    }
-
-    /**
-    * @Route("/nomePessoa", methods={"GET"})
-    */
-
-    public function nomePessoa(): Response
-    {
-        $pessoa = new Response('Jonathan Moreira', 200);
-
-        return $pessoa;
-
     }
 }
