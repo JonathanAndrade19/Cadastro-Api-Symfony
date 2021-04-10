@@ -24,4 +24,16 @@ class DefaultController
 
         return $resp;
     }
+
+    /**
+    * @Route("/nomePessoa", methods={"GET"})
+    */
+
+    public function nomePessoa(): Response
+    {
+        $pessoa = new Response('Jonathan Moreira', 200);
+
+        return $pessoa;
+
+    }
 }
